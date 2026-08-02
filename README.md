@@ -7,7 +7,7 @@ A collection of SQL practice scripts and exercises using the **Northwind** sampl
 ```
 .
 ├── database/
-│   └── Northwind.db
+│   └── northwind.db
 ├── scripts/
 │   └── best-selling_products.sql
 │   └── highest_total_spend_client.sql
@@ -28,19 +28,17 @@ The scripts focus on topics such as:
 - GROUP BY
 - Subqueries
 - Joins
-- Common Table Expressions (CTEs)
-- Window Functions
 
 More exercises will be added as I continue learning and practicing.
 
 ## Requirements
 
 - DB Browser for SQLite (or any SQLite-compatible client)
-- `Northwind.db` included in this repository
+- `northwind.db` included in this repository
 
 ## Running the Scripts
 
-1. Open `database/Northwind.db` in your preferred SQLite client.
+1. Open `database/northwind.db` in your preferred SQLite client.
 2. Open any script from the `scripts/` directory.
 3. Execute the query.
 
@@ -52,6 +50,7 @@ More exercises will be added as I continue learning and practicing.
 | `highest_total_spend_customer.sql` | Calculates the client with highest spend using subqueries and multiple tables. |
 | `orders_per_employee.sql` | Calculates the employees with more orders than an average employee using subqueries. |
 | `revenue_by_product.sql` | Calculates the total units sold and revenue generated for each product using subqueries. |
+| `revenue_by_product_with_join.sql` | Calculates the total units sold and revenue generated for each product using join functions. |
 
 
 ## License
