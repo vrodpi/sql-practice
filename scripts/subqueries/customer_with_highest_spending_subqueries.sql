@@ -56,4 +56,4 @@ HAVING TotalSpent = (
 			)
 		GROUP BY CustomerID
 		)
-)
+);
