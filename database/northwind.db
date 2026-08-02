@@ -1,12 +1,12 @@
 -- Either:
 --     Open DB Browser for SQLite.
---     Create a new database named Northwind.db.
+--     Create a new database named northwind.db.
 --     Select Execute SQL.
 --     Copy and paste the SQL below into the Execute SQL window.
 --     Run the script to populate the Northwind database.
 -- Or:
 --     Run the following command in a terminal window.
---     sqlite3 Northwind.db
+--     sqlite3 northwind.db
 --     Copy and paste the SQL below into the terminal window to populate the Northwind database.
 
 DROP TABLE IF EXISTS OrderDetails;
