@@ -14,6 +14,7 @@
 # - Calculated columns
 # - groupby()
 # - sort_values()
+# - to_csv()
 
 
 import sqlite3
@@ -61,3 +62,7 @@ revenue_by_products = (
 )
 
 print(revenue_by_products)
+
+# Creating a file to export the results as a csv file.
+FILE_PATH = Path(__file__).resolve().parents[1] / 'reports' / 'revenue_by_products.csv'
+revenue_by_products.to_csv(FILE_PATH, index = False)
