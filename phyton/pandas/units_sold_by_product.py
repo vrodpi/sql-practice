@@ -50,5 +50,5 @@ units_sold = (
 print(units_sold.head())
 
 # Creating a file to export the results as a csv file.
-FILE_PATH = Path(__file__).resolve().parents[1] / 'reports' / 'units_sold.csv'
+FILE_PATH = Path(__file__).resolve().parents[1] / 'reports' / 'units_sold_by_product.csv'
 units_sold.to_csv(FILE_PATH, index = False)

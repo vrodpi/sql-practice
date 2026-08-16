@@ -22,4 +22,4 @@ JOIN Customers c
 	ON o.CustomerID = c.CustomerID
 GROUP BY c.CustomerID
 ORDER BY TotalSpent DESC
-LIMIT 1
+LIMIT 1;

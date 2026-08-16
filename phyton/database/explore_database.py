@@ -28,8 +28,7 @@ with sqlite3.connect(DB_PATH) as nw:
     cursor.execute('''
                    SELECT name
                    FROM sqlite_master
-                   WHERE type = "table" 
-                        AND name != "sqlite_sequence"
+                   WHERE name NOT LIKE "sql%"
                    ''')
     
     tables = cursor.fetchall()
