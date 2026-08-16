@@ -20,6 +20,6 @@ JOIN Products p
 	ON od.ProductID = p.ProductID 
 JOIN Customers c
 	ON o.CustomerID = c.CustomerID
-GROUP BY c.CustomerID
+GROUP BY c.CustomerID, c.CustomerName
 ORDER BY TotalSpent DESC
 LIMIT 1;
