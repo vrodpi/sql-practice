@@ -22,8 +22,9 @@ WITH OrdersPerCustomer AS (
 SELECT COUNT(CustomerID) AS TotalCustomers,
        --Retrieves the customers with at least 2 orders
 	   COUNT(CASE WHEN OrdersMade >= 2 THEN 1 END) AS ReturningCustomers,
+	   
 	   ROUND(COUNT(CASE WHEN OrdersMade >= 2 THEN 1 END) * 100.0 
 			/ COUNT(CustomerID)
 			, 2
-			) AS ReturningCustomerPercentage
+	   ) AS ReturningCustomerPercentage
 FROM OrdersPerCustomer;

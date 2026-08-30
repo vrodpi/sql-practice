@@ -15,7 +15,8 @@ SELECT c.CustomerID,
 	   c.CustomerName,
 	   SUM(p.Price * od.Quantity) AS TotalSpent,
 	   RANK() OVER (
-			ORDER BY SUM(p.Price * od.Quantity) DESC) AS Ranking
+			ORDER BY SUM(p.Price * od.Quantity) DESC
+	   ) AS Ranking
 FROM Customers c
 JOIN Orders o
 	ON o.CustomerID = c. CustomerID

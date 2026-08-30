@@ -21,7 +21,7 @@ WITH MonthlyRevenue AS (
 		   LAG(SUM(p.Price * od.Quantity)) OVER(
 						ORDER BY strftime('%Y', o.OrderDate),
 						  		 strftime('%m', o.OrderDate)
-						) AS PreviousMonthRevenue
+		   ) AS PreviousMonthRevenue
 	FROM Orders o
 	JOIN OrderDetails od
 		ON od.OrderID = o.OrderID
@@ -35,5 +35,5 @@ SELECT *,
 	   ROUND(
 			(TotalRevenue - PreviousMonthRevenue) 
 			/ PreviousMonthRevenue * 100, 2
-			) AS GrowthPercentage
+	   ) AS GrowthPercentage
 FROM MonthlyRevenue;

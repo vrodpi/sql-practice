@@ -22,7 +22,7 @@ WITH RankedCategories AS (
            ROW_NUMBER() OVER(
 				PARTITION BY c.CategoryName
 				ORDER BY SUM(p.Price * od.Quantity) DESC
-				) AS Ranking
+		   ) AS Ranking
 	FROM Products p
 	JOIN Categories c
 		ON c.CategoryID = p.CategoryID
